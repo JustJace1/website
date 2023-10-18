@@ -9,3 +9,9 @@
 body {
 background-color: #DBF9FC;
 }
+
+
+.button{
+    border-radius: 18px;
+    border: none;
+}
