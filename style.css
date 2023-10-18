@@ -1,9 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
     border: 0;
     outline: none;
-    box-sizing: border-box;
+
 }
 
 body {
@@ -12,6 +10,6 @@ background-color: #DBF9FC;
 
 
 .button{
-    border-radius: 18px;
+    border-radius: 5;
     border: none;
 }
