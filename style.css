@@ -13,6 +13,6 @@ background-color: #DBF9FC;
 .button{
     border-radius: 100;
     border: none;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     scale: 120px;
 }
