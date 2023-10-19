@@ -1,6 +1,6 @@
 *{
     border: 0;
-    padding: 10; 
+    padding: 15; 
     border-radius: 3px;
 
 }
@@ -11,6 +11,21 @@ background-color: #DBF9FC;
 
 
 .button{
+    border-radius: 100;
     border: none;
-    margin-bottom: 0px;
+}
+
+#button1{
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: white;
+}
+
+#logo{
+    scale: 150%;
+    margin-top: 18px;
+}
+
+#text1{
+    margin-bottom: 30px;
 }
