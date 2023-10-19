@@ -22,6 +22,20 @@ background-color: #DBF9FC;
     text-align: left;
 }
 
+#button2{
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+#button3{
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: white;
+    text-align: right;
+}
+
 #logo{
     scale: 120%;
     margin-top: 18px;
