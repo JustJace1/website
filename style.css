@@ -9,9 +9,6 @@ body {
 background-color: #DBF9FC;
 }
 
-.button-groun{
-    text-align: center;
-}
 
 
 .button{
@@ -23,6 +20,7 @@ background-color: #DBF9FC;
     margin-bottom: 5px;
     font-size: 1em;
     color: white;
+    text-align: center;
 }
 
 #logo{
