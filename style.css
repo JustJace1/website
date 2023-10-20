@@ -9,6 +9,10 @@ body {
 background-color: #DBF9FC;
 }
 
+.button-groun{
+    text-align: center;
+}
+
 
 .button{
     border-radius: 100;
