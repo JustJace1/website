@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Prevent scrolling on the body */
+        body {
+            overflow: hidden; /* Disable scroll */
+        }
+        /* Center image horizontally */
+        .katana {
+            position: absolute;
+            bottom: -85px; /* Adjust top position */
+            left: 50%;
+            transform: translateX(-50%); /* This will center the image horizontally */
+            width: 250px; /* You can adjust the size */
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <!-- Image centered horizontally -->
+            <img src="assets/image.png" alt="Image Description" class="katana">
+        </div>
+        <div class="card_1">
+            <div class="image">
+                <p>当たる も 八卦 当たらぬ も 八卦</p>
+                <!-- Image element added -->
+                <div class="img"></div>
+            </div>
+        </div>
+        <div class="card_2">
+            <div id="txt"></div> <!-- For displaying the current time -->
+            <div class="secondsContainer">
+                <div id="seconds"></div> <!-- For displaying the seconds -->
+            </div>
+        </div>
+        <div class="card_3">
+            <form action="https://www.google.com/search?q=a">
+                <div class="search">
+                    <input type="search" name="q" aria-label="Search" placeholder="Search on Google">
+                    <i class="fa-solid fa-magnifying-glass iconSearch"></i>
+                </div>
+                <button type="submit" hidden>
+                    Search
+                </button>
+            </form>
+        </div>
+        <div class="card_4">
+            <a class="link" href="https://www.youtube.com/">
+                <p>Youtube</p>
+                <i class="fa-brands fa-youtube icon"></i>
+            </a>
+            <a class="link" href="https://open.spotify.com/">
+                <p>Spotify</p>
+                <i class="fa-brands fa-spotify icon"></i>
+            </a>
+            <a class="link" href="https://www.reddit.com/">
+                <p>Reddit</p>
+                <i class="fa-brands fa-reddit-alien icon"></i>
+            </a>
+            <a class="link" href="http://192.168.1.236:7575/">
+                <p>Dash Board</p>
+                <i class="fa-solid fa-cube icon"></i>
+            </a>
+            <a class="link" href="https://github.com/">
+                <p>Github</p>
+                <i class="fa-brands fa-github-alt icon"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for showing the time
+        function startTime() {
+            let today = new Date();
+            let hours = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds();
+
+            // Convert hours to 12-hour format
+            let period = "AM";
+            if (hours >= 12) {
+                period = "PM";
+                if (hours > 12) {
+                    hours -= 12; // Convert to 12-hour format
+                }
+            } else if (hours === 0) {
+                hours = 12; // Midnight case
+            }
+
+            min = checkTime(min);
+            sec = checkTime(sec);
+
+            // Update the time and seconds on the webpage
+            document.getElementById('txt').innerHTML = hours + ":" + min + " " + period;
+            document.getElementById('seconds').innerHTML = sec;
+
+            // Refresh the time every second
+            setTimeout(startTime, 1000);
+        }
+
+        // Ensure time is always two digits
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i; // Add a leading zero if needed
+            }
+            return i;
+        }
+
+        // Start the time when the page loads
+        window.onload = startTime;
+    </script>
+</body>
+</html>
